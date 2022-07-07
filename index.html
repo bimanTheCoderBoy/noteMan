@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fav icon add -->
+    <link rel="icon" type="image/x-icon" style="width: 1rem;height:1rem;" href="img/nav.png">
+    <!-- // -->
+    <title>noteMan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- nav bar from bootstrap -->
+    <nav class="navbar bg-dark ex-css-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="color: white; text-shadow:0 0 7px red"><h2><b>NoteMan</b></h2></a>
+            <div id="ex-nav-child"> 
+            <!-- external button  -->
+             <button id="navDaily" onclick="navDailyClick(1)" class="btn  ex-card-button ex-card-star" style="margin-right:1rem;position:relative;top:0;height:3rem;width:3rem;border-radius:100%; "><img style="width:2.5rem;"src="img/sun.png" alt="sun"></button>
+             <!-- end external button -->
+             <!-- external button  -->
+             <button id="navStar" onclick="navStarClick(1)" class="btn  ex-card-button ex-card-star" style="float:right;height:3rem;width:3rem;border-radius:100%; "><img style="width:2rem"src="img/star.png" alt="star"></button>
+             <!-- end external button -->  
+            <form class="d-flex" role="search">
+                <input class="form-control me-2 ex-css-nav-input" id="search_input" style="width: 20rem;" type="search" placeholder="Search Notes"
+                    aria-label="Search">
+                    
+            </form>
+            <!-- external button  -->
+            <button id="navStar"  onclick="logIn('update')" class="btn  ex-card-button ex-card-star ex-card-lock" style="margin-right:0;margin-left:0.5rem;height:3rem;width:3rem;border-radius:100%; "><img style="width:3rem"src="img/lock.png" alt="star"></button>
+            <!-- end external button --> 
+             
+            </div>
+        </div>
+    </nav>
+    <!-- nav-end -->
+
+    <!-- bootstrap container -->
+    <div class="container my-3 ex-css-con1 " style="min-width: 20rem;">
+        <h2 id="greet"></h2>
+        <!-- bootstrap card for addNote -->
+        <div class="card ex-css-card1 ">
+            <div class="card-body ">
+                <!-- bootstrap textarea -->
+                <div class="mb-3 ">
+                    <textarea class="form-control ex-css-area1" id="addTle" rows="1"
+                        placeholder="Write your Note-Title here.."></textarea>
+                        <br>
+                     <textarea class="form-control ex-css-area1" id="addTxt" rows="5"
+                        placeholder="Write your Notes here.."></textarea>
+
+                </div>
+                <!-- textarea end -->
+                <button class="btn btn-primary" id="addBtn">Add note</button>
+            </div>
+        </div>
+        <!-- card for add Note end -->
+
+        <h2 class="mt-5" id="total-num"></h2>
+
+        <div style="background-color: rgb(34, 33, 33);box-shadow: 0 0 10px rgb(91, 159, 165);height: 0.5rem; "> </div>
+        <br>
+
+        <div class="row container-fluid " id="notes">
+            <!-- <div class="col" id="col1"></div>
+            <div class="col" id="col2"></div>
+            <div class="col" id="col3"></div>
+            <div class="col" id="col4"></div> -->
+        </div>
+
+
+    </div>
+    <!-- container-end -->
+
+
+
+
+  
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    <script src="app_js/app.js"></script>
+</body>
+
+</html>
