@@ -241,6 +241,9 @@ function removeNote(de_index) {
     notesArray = JSON.parse(notes);
 
   }
+  //maintaining star 
+    starFix(de_index);
+
 
   //removing de-element from array
   notesTitleArray.splice(de_index, 1);
@@ -460,7 +463,7 @@ function logIn(flagUpdate = "none", maxIndex = 0) {
   updateData.innerHTML =
     `
           <button type="button" id="updateClose" onClick="closeUpdate()" style="float:right;position:relative;left:-1rem;top:-0.1rem;"class="btn-close btn-close-white" aria-label="Close"></button>
-          <br><br>
+          <br>
           <h4 style="position:relative;top:-1rem;"><b style="text-shadow:0 0 2px blue;">Update User data</b></h4>
           <div class="update-main-div-element">
           <div class="c-in " >
@@ -620,3 +623,26 @@ function maximzeOkOnClick(index) {
   showItems();
   closeUpdate();
 }
+
+//starUpdate bug fix
+  function starFix(indexxx) {
+   
+    let starData=localStorage.getItem('star');
+    if(starData!=null){
+      
+      let stardataArray=JSON.parse(starData);
+      stardataArray.forEach(function(element,index){
+        console.log(indexxx);
+        console.log(element);
+        if(element>indexxx){
+          element=element-1;
+         stardataArray[index]=`${element}`;
+
+        }
+      });
+      localStorage.setItem('star',JSON.stringify(stardataArray));
+
+    }
+    
+    
+  }
