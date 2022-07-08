@@ -371,11 +371,14 @@ function navStarClick(query) {
   if (flag_2 == 0 && query == 1) {
     flag_2 = 1;
     document.getElementById('navStar').style.backgroundColor = 'rgb(241, 132, 8)';
+    document.getElementById('navStar').style.boxShadow = '0 0 100px rgb(241, 132, 8) inset';
     showItems();
   }
   else if (flag_2 == 1 && query == 1) {
     flag_2 = 0;
     document.getElementById('navStar').style.backgroundColor = 'rgb(70, 72, 71)';
+    document.getElementById('navStar').style.boxShadow = '0 0 0px rgb(241, 132, 8) inset';
+
     showItems();
   }
   return flag_2;
@@ -387,11 +390,14 @@ function navDailyClick(query) {
   if (flag_3 == 0 && query == 1) {
     flag_3 = 1;
     document.getElementById('navDaily').style.backgroundColor = 'darkgray';
+    document.getElementById('navDaily').style.boxShadow = '0 0 100px darkgray inset';
     showItems();
   }
   else if (flag_3 == 1 && query == 1) {
     flag_3 = 0;
     document.getElementById('navDaily').style.backgroundColor = 'rgb(70, 72, 71)';
+    document.getElementById('navDaily').style.boxShadow = '0 0 0px darkgray inset';
+
     showItems();
   }
   return flag_3;
@@ -425,8 +431,8 @@ function logIn(flagUpdate = "none", maxIndex = 0) {
             <input type="text"id="rePassword" class="form-control"style="background-color:rgbrgb(233,236,239);" placeholder="Re-enter your Password.." aria-label="Username" aria-describedby="addon-wrapping">
             </div>
             </div>
-            <div class="b-in" >
-            <button type="button" onClick="signInSet()"style="padding:0.5rem;padding-top:0.7rem;width:5.5rem; height:2.8rem;border-radius:10px;"class="btn btn-outline-info"><h6>Sign in</h6></button>
+            <div class="b-in" id="b--in"style="position:relative; " >
+            <button type="button" onClick="signInSet()"style="position:relative; top:0;padding:0.5rem;padding-top:0.7rem;width:5.5rem; height:2.8rem;border-radius:10px;"class="btn btn-outline-info"><h6>Sign in</h6></button>
             </div>
             
             `
@@ -463,7 +469,7 @@ function logIn(flagUpdate = "none", maxIndex = 0) {
   updateData.innerHTML =
     `
           <button type="button" id="updateClose" onClick="closeUpdate()" style="float:right;position:relative;left:-1rem;top:-0.1rem;"class="btn-close btn-close-white" aria-label="Close"></button>
-          <br>
+          <br><br>
           <h4 style="position:relative;top:-1rem;"><b style="text-shadow:0 0 2px blue;">Update User data</b></h4>
           <div class="update-main-div-element">
           <div class="c-in " >

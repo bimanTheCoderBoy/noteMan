@@ -146,13 +146,14 @@ body{
         }
         #signIn{
             min-width: 275px;
+            min-height: 275px;
             height: 40vh;
             width: 30%;
             border-radius: 1.5rem;
             background-color:rgb(31,37,41);
             box-shadow: 0 0 20px rgb(91, 198, 171);
             display:block;
-            grid-template-columns: 50%;
+            /* grid-template-columns: 50%; */
             justify-content: center;
             align-items: center;
         }
@@ -172,6 +173,7 @@ body{
             width: 100%;
             height: 6rem;
             display: flex;
+            /* background-color: red; */
             justify-content: center;
             align-items: center;
             /* background-color: rgb(169, 162, 162); */
@@ -249,7 +251,11 @@ body{
                
               
             }
-
+            #navDaily:active{
+                box-shadow: 0 0 20px rgb(226, 150, 58),0 0 100px darkorange inset;
+             
+                
+            }
 
 
             /* ----------------------------------------------- */
@@ -270,7 +276,14 @@ body{
             left: 4rem;
          }
         #notes{
-            display: flex;
+            display: grid;
+            /* background-color: blue; */
+            justify-content: center;
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto;
+            /* align-items: center; */
+           /* padding-left: 50px; */
+           /* padding-right: 100px; */
         }
         .noteCard{
             margin: 0;
@@ -280,6 +293,7 @@ body{
         top:0.4rem;
         left:70%;
        }
+       
        .ex-card-lock{
         position: absolute;
         top:0.4rem;
@@ -292,5 +306,70 @@ body{
         width: 100%;
         height: 100vh;
        }
+     
+    #navDaily:hover{
+        
+        box-shadow:0 0 100px rgb(70,72,71) inset;
+        /* background-color: darkgrey; */
+        
+    }
+    #navStar:hover{
+        
+        box-shadow:0 0 100px rgb(70,72,71) inset;
+        /* background-color: darkgrey; */
+        
+    }
    
+   
+    .ex-card-button1:active{
+        background-color: red;
+    }
+    .ex-card-button2:active{
+        background-color: rgb(255, 204, 0);
+    }
+    .maximize:active{
+        background-color: rgb(51, 0, 255);
+    }
+    #bigDiv{
+        align-items:none;
+    
+    }
+  
+    #logIn{
+        min-height: 250px;
+
+    }
+    #updateData{
+        min-height: 300px;
+
+    }
+   #b--in{
+      position: relative;
+        /* top:-7rem; */
+    }
+    #col1{
+       
+        display: grid;
+        justify-content: center;
+    }
+    #col2{
+       /* background-color: aliceblue; */
+        display: grid;
+        justify-content: center;
+    }
+    #col3{
+        /* background-color: rgb(34, 105, 167); */
+       
+        display: grid;
+        justify-content: center;
+    }
+    #col4{
+        /* background-color: rgb(44, 94, 17); */
+       
+        display: grid;
+        justify-content: center;
+    }
+    #updateClose:active{
+        background-color: red;
+    }
 }
