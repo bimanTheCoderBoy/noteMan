@@ -13,9 +13,11 @@ body{
 }
 
 .ex-css-nav{
+
     box-sizing: border-box;
     margin:0.4rem;
-    width: 99%;
+    /* margin-right:50px; */
+    width: 100%;
     box-shadow: 0 0 15px green;
     z-index: 1;
     position: -webkit-sticky; /* Safari */
